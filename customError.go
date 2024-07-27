@@ -5,8 +5,8 @@ type customError struct {
 	error
 }
 
-func New(e error, code int) customError {
-	return customError{
+func New(e error, code int) error {
+	return &customError{
 		code:  code,
 		error: e,
 	}

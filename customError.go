@@ -1,16 +1,14 @@
 package customError
 
 type CustomError struct {
-	code      int
-	requestID int
+	code int
 	error
 }
 
-func New(code int, requestID int, e error) error {
+func New(code int, e error) error {
 	return &CustomError{
-		code:      code,
-		requestID: requestID,
-		error:     e,
+		code:  code,
+		error: e,
 	}
 }
 

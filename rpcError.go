@@ -1,4 +1,4 @@
-package customError
+package rpcError
 
 const (
 	ParseError     = -32700
@@ -7,26 +7,26 @@ const (
 	InternalError  = -32602
 )
 
-type CustomError struct {
+type rpcError struct {
 	code int
 	error
 }
 
 func New(code int, e error) error {
-	return &CustomError{
+	return &rpcError{
 		code:  code,
 		error: e,
 	}
 }
 
-func (a *CustomError) Error() string {
+func (a *rpcError) Error() string {
 	return ""
 }
 
-func (a *CustomError) GetError() error {
+func (a *rpcError) GetError() error {
 	return a.error
 }
 
-func (a *CustomError) GetCode() int {
+func (a *rpcError) GetCode() int {
 	return a.code
 }

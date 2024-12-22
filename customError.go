@@ -1,5 +1,12 @@
 package customError
 
+const (
+	ParseError     = -32700
+	MethodNotFound = -32601
+	InvalidParams  = -32602
+	InternalError  = -32602
+)
+
 type CustomError struct {
 	code int
 	error

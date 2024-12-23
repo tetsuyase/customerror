@@ -1,10 +1,10 @@
 package rpcError
 
 const (
-	ParseError     = -32700
 	MethodNotFound = -32601
 	InvalidParams  = -32602
 	InternalError  = -32602
+	ParseError     = -32700
 )
 
 type rpcError struct {

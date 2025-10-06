@@ -1,2 +1,2 @@
-# rpc error
-Error package used for JSON RPC protocol API errors
+# custom error
+Custom error package

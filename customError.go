@@ -1,25 +1,25 @@
 package customError
 
-type customError struct {
+type CustomError struct {
 	code int
 	error
 }
 
 func New(code int, e error) error {
-	return &customError{
+	return &CustomError{
 		code:  code,
 		error: e,
 	}
 }
 
-func (a *customError) Error() string {
+func (a *CustomError) Error() string {
 	return ""
 }
 
-func (a *customError) GetError() error {
+func (a *CustomError) GetError() error {
 	return a.error
 }
 
-func (a *customError) GetCode() int {
+func (a *CustomError) GetCode() int {
 	return a.code
 }

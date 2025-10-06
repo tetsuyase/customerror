@@ -1,25 +1,25 @@
-package rpcError
+package customError
 
-type rpcError struct {
+type customError struct {
 	code int
 	error
 }
 
 func New(code int, e error) error {
-	return &rpcError{
+	return &customError{
 		code:  code,
 		error: e,
 	}
 }
 
-func (a *rpcError) Error() string {
+func (a *customError) Error() string {
 	return ""
 }
 
-func (a *rpcError) GetError() error {
+func (a *customError) GetError() error {
 	return a.error
 }
 
-func (a *rpcError) GetCode() int {
+func (a *customError) GetCode() int {
 	return a.code
 }
